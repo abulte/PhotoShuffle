@@ -28,8 +28,8 @@ def scan_exif_data( root ):
         for name in files:
             row = {}
             row['path'] = path
-            row['name'] = splitext( name )[0].lower()    
-            row['ext'] = splitext( name )[1].lower()    
+            row['name'] = splitext( name )[0]    
+            row['ext'] = splitext( name )[1]    
             exif = get_exif_data( joinpath(path, name) )
             if exif != None:
                 row['exif'] = exif
